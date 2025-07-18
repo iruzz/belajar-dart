@@ -2,10 +2,13 @@ import 'dart:io';
 import 'dart:convert';
 import 'dart:io';
 
-Future<void> saveTasks() async {
+Future<void> loadTasks() async {
   var file = File('tasks.json');
-  var jsonTasks = tasks.map((t) => {'title': t.title, 'done': t.done}).toList();
-  await file.writeAsString(jsonEncode(jsonTasks));
+  if (await file.exists()) {
+    var contents = await file.readAsString();
+    var jsonData = jsonDecode(contents);
+    tasks = (jsonData as List).map((e) => Task(e['title'], done: e['done'])).toList();
+  }
 }
 
 class Task {
@@ -40,17 +43,18 @@ void deleteTask(int index) {
   }
 }
 
-void main() {
+void main() async {
   // print('To-Do App started');
   // addTask('Belajar Dart');
   // addTask('Ngoding project');
   // print('Jumlah task: ${tasks.length}');
 
-  stdout.write('Masukkan task baru: ');
-  String? input = stdin.readLineSync();
-  if (input != null && input.isNotEmpty) {
-    addTask(input);
-  }
+  // stdout.write('Masukkan task baru: ');
+  // String? input = stdin.readLineSync();
+  // if (input != null && input.isNotEmpty) {
+  //   addTask(input);
+  // }
+   await loadTasks();
   showTasks();
   // toggleDone(0);
   // deleteTask(1);
