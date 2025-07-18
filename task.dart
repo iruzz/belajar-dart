@@ -1,5 +1,12 @@
 import 'dart:io';
+import 'dart:convert';
+import 'dart:io';
 
+Future<void> saveTasks() async {
+  var file = File('tasks.json');
+  var jsonTasks = tasks.map((t) => {'title': t.title, 'done': t.done}).toList();
+  await file.writeAsString(jsonEncode(jsonTasks));
+}
 
 class Task {
   String title;
