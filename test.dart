@@ -13,7 +13,9 @@ class Orang {
   int umur;
 
   // Constructor
-  Orang(this.nama, this.umur);
+  // Orang(this.nama, this.umur);
+
+  Orang({ required this.nama, required this.umur});
 
   void perkenalan() {
     print("Nama saya $nama, umur saya $umur tahun");
@@ -22,8 +24,8 @@ class Orang {
 
 void main() {
   print("hellow world");
-  Orang orang1 = Orang("Budi", 20);
-  print(orang1.nama);
+  Orang orang1 = Orang(nama: "Ruzz", umur: 16);
+  orang1.perkenalan();
 
   // print(tambah(2, 5));
 }
