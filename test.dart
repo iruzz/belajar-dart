@@ -8,6 +8,17 @@ tambah(angka1, angka2) {
 //   print("Nama saya $nama, umur saya $umur tahun");
 // }
 
+class Hewan with Kemampuan {
+  String nama;
+  String pemakan;
+
+  Hewan(this.nama, this.pemakan);
+
+  void kemampuanHewan() {
+    print("Saya $nama, saya adalah $pemakan");
+  }
+}
+
 mixin Kemampuan {
   void berlari(jarak, waktu) {
     print("Saya bisa berlari sejauh $jarak meter dalam waktu $waktu detik");
@@ -40,5 +51,9 @@ void main() {
   orang1.perkenalan();
   orang1.menyusui();
   orang1.berlari(100, 10);
+
+  Hewan kucing = Hewan("Kucing", "Karnivora");
+  kucing.kemampuanHewan();
+  kucing.berlari(50, 5);
   // print(tambah(2, 5));
 }
