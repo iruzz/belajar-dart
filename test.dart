@@ -8,7 +8,13 @@ tambah(angka1, angka2) {
 //   print("Nama saya $nama, umur saya $umur tahun");
 // }
 
-class Orang {
+class kemampuan {
+  void menyusui() {
+    print("Saya bisa menyusui");
+  }
+}
+
+class Orang extends kemampuan {
   String nama;
   int umur;
 
@@ -26,6 +32,7 @@ void main() {
   print("hellow world");
   Orang orang1 = Orang(nama: "Ruzz", umur: 16);
   orang1.perkenalan();
+  orang1.menyusui();
 
   // print(tambah(2, 5));
 }
