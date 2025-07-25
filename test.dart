@@ -1,23 +1,12 @@
-tambah(angka1, angka2) {
-  int hasil;
-  hasil = angka1 + angka2;
-  return hasil;
-}
+// tambah(angka1, angka2) {
+//   int hasil;
+//   hasil = angka1 + angka2;
+//   return hasil;
+// }
 
 // orang(nama, umur) {
 //   print("Nama saya $nama, umur saya $umur tahun");
 // }
-
-class Hewan with Kemampuan {
-  String nama;
-  String pemakan;
-
-  Hewan(this.nama, this.pemakan);
-
-  void kemampuanHewan() {
-    print("Saya $nama, saya adalah $pemakan");
-  }
-}
 
 mixin Kemampuan {
   void berlari(jarak, waktu) {
@@ -30,6 +19,19 @@ class mamalia {
     print("Saya bisa menyusui");
   }
 }
+
+
+class Hewan with Kemampuan {
+  String nama;
+  String pemakan;
+
+  Hewan(this.nama, this.pemakan);
+
+  void kemampuanHewan() {
+    print("Saya $nama, saya adalah $pemakan");
+  }
+}
+
 
 class Orang extends mamalia with Kemampuan {
   String nama;
@@ -44,6 +46,9 @@ class Orang extends mamalia with Kemampuan {
     print("Nama saya $nama, umur saya $umur tahun");
   }
 }
+
+
+
 
 void main() {
   print("hellow world");
