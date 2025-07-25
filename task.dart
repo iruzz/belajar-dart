@@ -1,3 +1,6 @@
+import 'dart:io';
+
+
 class Task {
   String title;
   bool done;
@@ -31,11 +34,17 @@ void deleteTask(int index) {
 }
 
 void main() {
-  print('To-Do App started');
-  addTask('Belajar Dart');
-  addTask('Ngoding project');
-  print('Jumlah task: ${tasks.length}');
+  // print('To-Do App started');
+  // addTask('Belajar Dart');
+  // addTask('Ngoding project');
+  // print('Jumlah task: ${tasks.length}');
+
+  stdout.write('Masukkan task baru: ');
+  String? input = stdin.readLineSync();
+  if (input != null && input.isNotEmpty) {
+    addTask(input);
+  }
   showTasks();
-  toggleDone(0);
-  deleteTask(1);
+  // toggleDone(0);
+  // deleteTask(1);
 }
