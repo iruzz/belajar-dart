@@ -37,5 +37,5 @@ void main() {
   print('Jumlah task: ${tasks.length}');
   showTasks();
   toggleDone(0);
-
+  deleteTask(1);
 }
