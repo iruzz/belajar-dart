@@ -24,6 +24,12 @@ void toggleDone(int index) {
   }
 }
 
+void deleteTask(int index) {
+  if (index >= 0 && index < tasks.length) {
+    tasks.removeAt(index);
+  }
+}
+
 void main() {
   print('To-Do App started');
   addTask('Belajar Dart');
@@ -31,4 +37,5 @@ void main() {
   print('Jumlah task: ${tasks.length}');
   showTasks();
   toggleDone(0);
+  deleteTask(1);
 }
