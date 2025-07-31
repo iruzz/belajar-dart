@@ -1,0 +1,36 @@
+// rehan
+
+String Length : 25
+String Contains : true
+String in Upper Case : REYHAN ADIPRAMANA NUGRAHA
+String in Lower Case : reyhan adipramana nugraha
+Start With : true
+End with : true
+Subsng (1, 7) : eyhan 
+String with Trim : Reyhan adipramana nugraha
+String with Trim Left : Reyhan adipramana nugraha
+String with Trim Right : Reyhan adipramana nugraha
+String with isEmpty : false
+String with isNotEmpty : true
+String Splited by Space : [Reyhan, adipramana, nugraha]
+String with ReplaceAll : reyhan adipramana nugraha
+String with Compare : 1
+
+// ruzz
+
+8
+Hello World, nama saya fairuz Ar Rasyid Rabbani, kelas saya XI RPL 1, umur saya 16 tahun, tinggi badan saya 1.65 meter
+Nama saya FAIRUZ AR RASYID RABBANI
+Nama saya fairuz ar rasyid rabbani
+apakah saya suka berenang? Ya
+Nama saya tidak diawali dengan fairuz
+Nama saya diakhiri dengan Rabbani
+fairuz Ar
+Hobi saya sekarang Mendaki Gym dan Ngoding king PHP
+[Berenang, Gym, dan, Ngoding, king, PHP]
+   Saya suka nasgor goreng dan es teh hangat   
+spasi kalimat dihapus | Saya suka nasgor goreng dan es teh hangat
+spasi awal dihapus|Saya suka nasgor goreng dan es teh hangat   |
+spasi akhir dihapus|   Saya suka nasgor goreng dan es teh hangat|
+perbandingan panjang karakter umur dengan tinggi adalah : 1
+perbandingan panjang karakter nama dengan kalimat adalah : -1
