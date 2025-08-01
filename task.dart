@@ -18,11 +18,17 @@ void showTasks() {
   }
 }
 
+void toggleDone(int index) {
+  if (index >= 0 && index < tasks.length) {
+    tasks[index].done = !tasks[index].done;
+  }
+}
+
 void main() {
   print('To-Do App started');
   addTask('Belajar Dart');
   addTask('Ngoding project');
   print('Jumlah task: ${tasks.length}');
   showTasks();
-
+  toggleDone(0);
 }
