@@ -35,9 +35,6 @@ class IniList extends Siswa {
  
 }
 
-
-
-
 void main() {
   // Daftar siswa
 
